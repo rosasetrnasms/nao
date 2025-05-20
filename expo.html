@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Tienda de Joyas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fce4ec;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffb4b4;
+      padding: 20px;
+    }
+    .logo {
+      width: 150px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    section {
+      margin: 20px auto;
+      max-width: 900px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    }
+    h1 {
+      color: #ad1457;
+    }
+    .producto {
+      background: #fff;
+      border: 2px solid #f06292;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px auto;
+      width: 250px;
+      box-shadow: 0 0 5px #ccc;
+    }
+    .producto button {
+      background: #f06292;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .producto button:hover {
+      background: #e91e63;
+    }
+    .carrito {
+      background: #fffde7;
+      border: 2px solid #fdd835;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 30px;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #mensaje-descuento {
+      color: green;
+      font-weight: bold;
+    }
+    .catalogo-botones {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .catalogo-boton {
+      background-color: #f06292;
+      color: white;
+      font-size: 1.2em;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+    .catalogo-boton:hover {
+      background-color: #ec407a;
+      transform: scale(1.05);
+    }
+    .producto {
+      display: inline-block;
+      width: 45%;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fff3e0;
+    }
+    .producto img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+    }
+    .carrito {
+      text-align: left;
+      margin-top: 30px;
+      background-color: #fffde7;
+      border: 2px solid #000;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .carrito button {
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #f06292;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src=NIRC (1) (1).png />
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h1>¡Bienvenido a la tienda NIRC!</h1>
+    <p>En esta página encontrarás distintos tipos de joyería como pulseras, collares, anillos e incluso aretes.</p>
+  </section>
+
+  <section id="catalogo">
+    <h2>Catálogos</h2>
+    <div class="catalogo-botones">
+      <button class="catalogo-boton" onclick="location.href='#anillos'">Anillos</button>
+      <button class="catalogo-boton" onclick="location.href='#collares'">Collares</button>
+      <button class="catalogo-boton" onclick="location.href='#sets'">Sets</button>
+    </div>
+  </section>
+
+  <section id="anillos">
+    <h2>Catálogo: Anillos</h2>
+    <div class="producto">
+      <img src=IMG_20250407_155321427_MFNR (1).jpg />
+      <p>1 Anillo de acero inoxidable medida de dedo 18.</p>
+      <p><strong>$15</strong></p>
+      <button onclick="agregarAlCarrito('Anillo acero 18', 15)">Comprar</button>
+    </div>
+  </section>
+
+  <section id="collares">
+    <h2>Catálogo: Collares</h2>
+    <div class="producto">
+      <img src=IMG_20250407_102636110_MFNR (1).jpg />
+      <p>Collar de acero inoxidable con forma de cadena.</p>
+      <p><strong>$30</strong></p>
+      <button onclick="agregarAlCarrito('Collar cadena plata', 30)">Comprar</button>
+    </div>
+  </section>
+
+  <section id="sets">
+    <h2>Catálogo: Sets</h2>
+    <div class="producto">
+      <img src=IMG_20250407_155307508_MFNR.jpg alt="Set de collar, aretes y anillo" />
+      <p>Set con baño de oro y diamantes de imitación.</p>
+      <p><strong>$80</strong></p>
+      <button onclick="agregarAlCarrito('Set oro con diamantes', 80)">Comprar</button>
+    </div>
+
+      <div class="producto">
+      <img src=IMG_20250407_102636110_MFNR (1).jpg alt="3 Anillos" />
+      <p> set de collar con aretes de acero inoxidable.</p>
+      <p><strong>$45</strong></p>
+      <button onclick="agregarAlCarrito('Pack 3 anillos acero', 25)">Comprar</button>
+    </div>
+  </section>
+
+  <section>
+    <div class="carrito">
+      <h2>Carrito de Compras</h2>
+      <ul id="items-carrito"></ul>
+      <p><strong>Total: $<span id="total">0</span></strong></p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <p>Escríbenos para más información o para hacer tu pedido.</p>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+      <p>whatsApp: 664 731 4938 </p>
+      <p>Discord: Lilieth_rose </p>
+      <p>Istagram: joyeriaNICR</p>
+    </form>
+  </section>
+
+  <footer>
+    <p>2025 NIRC Joyería</p>
+  </footer>
+
+  <script>
+    let total = 0;
+
+    function agregarAlCarrito(nombre, precio) {
+      const lista = document.getElementById('items-carrito');
+
+      const item = document.createElement('li');
+      item.textContent = `${nombre} - $${precio}`;
+
+      const botonEliminar = document.createElement('button');
+      botonEliminar.textContent = '❌';
+      botonEliminar.style.marginLeft = '10px';
+      botonEliminar.onclick = function () {
+        lista.removeChild(item);
+        total -= precio;
+        document.getElementById('total').textContent = total.toFixed(2);
+      }
+
+      item.appendChild(botonEliminar);
+      lista.appendChild(item);
+
+      total += precio;
+      document.getElementById('total').textContent = total.toFixed(2);
+    }
+  </script>
+</body>
+</html>
